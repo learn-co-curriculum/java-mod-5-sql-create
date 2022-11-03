@@ -1,4 +1,4 @@
-# Basic SQL Statements
+# SQL CREATE TABLE, DROP TABLE
 
 ## Learning Goals
 
