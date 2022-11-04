@@ -61,7 +61,10 @@ While PostgreSQL supports dozens of data types, we will primarily work with the 
 - INTEGER stores integer values
 - DECIMAL stores fractional numeric values
 - TEXT stores textual values
-- DATE stores year, month, and day
+- DATE stores year, month, and day with a recommended format of YYYY-MM-DD. 
+- BOOLEAN represents a boolean value.
+
+To explore more data types, please see [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html).
 
 #### Coding Conventions
 
@@ -71,6 +74,9 @@ While PostgreSQL supports dozens of data types, we will primarily work with the 
 2. Use lowercase letters for table and column names such as `pet`, `species`, etc.
 3. When we have multiple words in a table or column name,
    link them together using underscores rather than spaces or camelcase.
+4. There is some debate whether table names should be singular or plural.
+   Whether you choose singular or plural names, be consistent across all tables
+   within a database. The lessons will use singular nouns for tables names.  
 
 The `CREATE TABLE` statement for the `pet` table is shown below:
 
@@ -101,9 +107,13 @@ We will use the query tool to execute the CREATE statement:
 
 ![create table](https://curriculum-content.s3.amazonaws.com/6002/sql-create-statement/createtable.png)
 
+A database **schema** is the structure that represents the logical view
+of the database. It defines how the data is organized into tables,
+how the tables are related, and other functional and structural
+constraints on the data.
 
-We can confirm the table was added to the `pets` database by expanding the database
-tree structure as shown below:
+We can confirm the `pet` table was added to the `pets` database
+by expanding the database tree structure (i.e. schema) as shown below:
 
 ![pet structure](https://curriculum-content.s3.amazonaws.com/6002/sql-create-statement/confirmnewtable.png
 )
